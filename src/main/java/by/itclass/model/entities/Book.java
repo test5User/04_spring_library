@@ -3,19 +3,20 @@ package by.itclass.model.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
+@Table(name = "books")
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class Library {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NonNull private String name;
-    @NonNull private String address;
-    @OneToMany(mappedBy = "library", fetch = FetchType.EAGER)
-    private List<Book> books;
+    @NonNull private String genre;
+    @NonNull private String author;
+    @NonNull private String title;
+    @NonNull private int pages;
+    @ManyToOne
+    private Library library;
 }
