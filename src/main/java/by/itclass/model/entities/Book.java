@@ -18,5 +18,5 @@ public class Book {
     @NonNull private String title;
     @NonNull private int pages;
     @ManyToOne
-    private Library library;
+    @NonNull private Library library;
 }

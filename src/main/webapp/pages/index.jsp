@@ -4,10 +4,11 @@
 <html>
 <head>
     <title>Libraries</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <table border="1">
-        <tr>
+        <tr class="red">
             <th>Id</th>
             <th>Name</th>
             <th>Address</th>
@@ -21,6 +22,7 @@
                 <td>
                     <a href="/view/${library.id}">View</a>
                     <a href="/del?id=${library.id}">Delete</a>
+                    <a href="/upd?id=${library.id}">Update</a>
                 </td>
             </tr>
         </c:forEach>
@@ -28,5 +30,6 @@
     <p>
         <a href="/pages/addLib.jsp">Add new Lib</a>
     </p>
+    <script src="/js/script.js"></script>
 </body>
 </html>
